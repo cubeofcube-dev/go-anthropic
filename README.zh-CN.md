@@ -1,18 +1,18 @@
 # Go Anthropic
 
-**English** | [简体中文](./README.zh-CN.md)
+**简体中文** | [English](./README.md)
 
-Anthropic SDK implemented in Go, supporting models such as Claude 2.1, Claude 3 (supports sending images), etc.
+用 Go 实现的 Anthropic SDK，支持：Claude 2.1、Claude 3（支持发送图片）等模型。
 
-## Installation
+## 安装
 
 ```
 go get github.com/wengchaoxi/go-anthropic
 ```
 
-## Usage
+## 简单使用
 
-By default, it will fetch `ANTHROPIC_API_KEY` and `ANTHROPIC_BASE_URL` from the environment variables.
+> 默认会从环境变量中获取 `ANTHROPIC_API_KEY`、`ANTHROPIC_BASE_URL`。
 
 ```go
 package main
@@ -31,7 +31,7 @@ func main() {
 	// })
 
 	resp, err := cli.CreateMessages(anthropic.MessagesRequest{
-		Model: anthropic.MODEL_CLAUDE_3_SONNET, // or `MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
+		Model: anthropic.MODEL_CLAUDE_3_SONNET, // 或者 `MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
 		Messages: []anthropic.Message{{
 			Role: "user",
 			Content: []anthropic.MessageContent{
@@ -51,7 +51,7 @@ func main() {
 }
 ```
 
-## Streaming Responses
+## 流式响应
 
 ```go
 package main
@@ -70,7 +70,7 @@ func main() {
 	// })
 
 	stream, _ := cli.CreateMessagesStream(anthropic.MessagesRequest{
-		Model: anthropic.MODEL_CLAUDE_3_SONNET, // or `MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
+		Model: anthropic.MODEL_CLAUDE_3_SONNET, // 或者 `MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
 		Messages: []anthropic.Message{{
 			Role: "user",
 			Content: []anthropic.MessageContent{
@@ -95,7 +95,7 @@ func main() {
 }
 ```
 
-## References
+## 相关文档
 
 - https://docs.anthropic.com/claude/reference/messages_post
 - https://docs.anthropic.com/claude/reference/messages-streaming
