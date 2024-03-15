@@ -22,7 +22,7 @@ func main() {
 	cli := anthropic.NewClient()
 
 	req := anthropic.MessagesRequest{
-		Model: anthropic.MODEL_CLAUDE_3_SONNET,
+		Model: anthropic.MODEL_CLAUDE_3_HAIKU,
 		Messages: []anthropic.Message{{
 			Role: "user",
 			Content: []anthropic.MessageContent{

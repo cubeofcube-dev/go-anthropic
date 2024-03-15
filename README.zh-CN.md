@@ -31,7 +31,8 @@ func main() {
 	// })
 
 	resp, err := cli.CreateMessages(anthropic.MessagesRequest{
-		Model: anthropic.MODEL_CLAUDE_3_SONNET, // 或者 `MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
+		// `MODEL_CLAUDE_3_SONNET`、`MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
+		Model: anthropic.MODEL_CLAUDE_3_HAIKU
 		Messages: []anthropic.Message{{
 			Role: "user",
 			Content: []anthropic.MessageContent{
@@ -70,7 +71,8 @@ func main() {
 	// })
 
 	stream, _ := cli.CreateMessagesStream(anthropic.MessagesRequest{
-		Model: anthropic.MODEL_CLAUDE_3_SONNET, // 或者 `MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
+		// `MODEL_CLAUDE_3_SONNET`、`MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
+		Model: anthropic.MODEL_CLAUDE_3_HAIKU
 		Messages: []anthropic.Message{{
 			Role: "user",
 			Content: []anthropic.MessageContent{

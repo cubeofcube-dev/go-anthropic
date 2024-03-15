@@ -7,7 +7,7 @@ const (
 	MODEL_CLAUDE_2_1      = "claude-2.1"
 	MODEL_CLAUDE_3_SONNET = "claude-3-sonnet-20240229"
 	MODEL_CLAUDE_3_OPUS   = "claude-3-opus-20240229"
-	// MODEL_CLAUDE_3_HAIKU  = "claude-3-haiku-20240229"
+	MODEL_CLAUDE_3_HAIKU  = "claude-3-haiku-20240307"
 )
 
 // MessageContentText | MessageContentFile
