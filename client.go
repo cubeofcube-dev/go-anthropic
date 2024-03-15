@@ -53,6 +53,7 @@ func NewClient(opts ...ClientOptions) *Client {
 		cli:     &http.Client{},
 	}
 }
+
 func (c *Client) CreateMessages(mr MessagesRequest) (*MessagesResponse, error) {
 	reqData, err := json.Marshal(&mr)
 	if err != nil {
@@ -112,7 +113,7 @@ func (c *Client) CreateMessagesStream(mr MessagesRequest) (*MessagesStream, erro
 		return &MessagesStream{}, errors.New("[HTTP Do Request] " + err.Error())
 	}
 
-	// error handling
+	// handle error
 	if resp.StatusCode != http.StatusOK {
 		respData, _ := io.ReadAll(resp.Body)
 		var errMessages MessagesResponseError

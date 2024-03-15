@@ -45,10 +45,10 @@ func TestCreateMessages(t *testing.T) {
 		defer stream.Close()
 		for {
 			_, err := stream.Recv()
-			if err == io.EOF {
-				break
-			}
 			if err != nil {
+				if err == io.EOF {
+					break
+				}
 				t.Errorf("Recv() error = %v", err)
 				return
 			}

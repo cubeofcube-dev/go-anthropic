@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/base64"
 	"fmt"
+	"io"
 	"os"
 
 	"github.com/wengchaoxi/go-anthropic"
@@ -55,9 +56,13 @@ func main() {
 	for {
 		resp, err := stream.Recv()
 		if err != nil {
+			if err == io.EOF {
+				break
+			}
 			fmt.Println(err.Error())
 			return
 		}
-		fmt.Println(resp.Delta.Text)
+		fmt.Print(resp.Delta.Text)
 	}
+	fmt.Println()
 }
