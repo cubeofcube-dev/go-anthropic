@@ -7,7 +7,7 @@
 ## 安装
 
 ```
-go get github.com/wengchaoxi/go-anthropic
+go get github.com/cubeofcube-dev/go-anthropic
 ```
 
 ## 简单使用
@@ -20,7 +20,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/wengchaoxi/go-anthropic"
+	"github.com/cubeofcube-dev/go-anthropic"
 )
 
 func main() {
@@ -60,7 +60,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/wengchaoxi/go-anthropic"
+	"github.com/cubeofcube-dev/go-anthropic"
 )
 
 func main() {

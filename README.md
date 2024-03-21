@@ -7,7 +7,7 @@ Anthropic SDK implemented in Go, supporting models such as Claude 2.1, Claude 3 
 ## Installation
 
 ```
-go get github.com/wengchaoxi/go-anthropic
+go get github.com/cubeofcube-dev/go-anthropic
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/wengchaoxi/go-anthropic"
+	"github.com/cubeofcube-dev/go-anthropic"
 )
 
 func main() {
@@ -60,7 +60,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/wengchaoxi/go-anthropic"
+	"github.com/cubeofcube-dev/go-anthropic"
 )
 
 func main() {

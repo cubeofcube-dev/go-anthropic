@@ -4,7 +4,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/wengchaoxi/go-anthropic"
+	"github.com/cubeofcube-dev/go-anthropic"
 )
 
 func TestCreateMessages(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/wengchaoxi/go-anthropic"
+	"github.com/cubeofcube-dev/go-anthropic"
 )
 
 func imageToBase64(filePath string) string {
