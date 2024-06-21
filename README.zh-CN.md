@@ -2,7 +2,7 @@
 
 **简体中文** | [English](./README.md)
 
-用 Go 实现的 Anthropic SDK，支持：Claude 2.1、Claude 3（支持发送图片）等模型。
+用 Go 实现的 Anthropic SDK，支持：Claude 2.1、Claude 3、Claude 3.5（支持发送图片）等模型。
 
 ## 安装
 
@@ -31,7 +31,7 @@ func main() {
 	// })
 
 	resp, err := cli.CreateMessages(anthropic.MessagesRequest{
-		// `MODEL_CLAUDE_3_SONNET`、`MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
+		// `MODEL_CLAUDE_35_SONNET`、`MODEL_CLAUDE_3_SONNET`、`MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
 		Model: anthropic.MODEL_CLAUDE_3_HAIKU
 		Messages: []anthropic.Message{{
 			Role: "user",
@@ -71,7 +71,7 @@ func main() {
 	// })
 
 	stream, _ := cli.CreateMessagesStream(anthropic.MessagesRequest{
-		// `MODEL_CLAUDE_3_SONNET`、`MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
+		// `MODEL_CLAUDE_35_SONNET`、`MODEL_CLAUDE_3_SONNET`、`MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
 		Model: anthropic.MODEL_CLAUDE_3_HAIKU
 		Messages: []anthropic.Message{{
 			Role: "user",

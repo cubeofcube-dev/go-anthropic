@@ -2,7 +2,7 @@
 
 **English** | [简体中文](./README.zh-CN.md)
 
-Anthropic SDK implemented in Go, supporting models such as Claude 2.1, Claude 3 (supports sending images), etc.
+Anthropic SDK implemented in Go, supporting models such as Claude 2.1, Claude 3, and Claude 3.5 (supports sending images), etc.
 
 ## Installation
 
@@ -31,7 +31,7 @@ func main() {
 	// })
 
 	resp, err := cli.CreateMessages(anthropic.MessagesRequest{
-		// `MODEL_CLAUDE_3_SONNET`、`MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
+		// `MODEL_CLAUDE_35_SONNET`、`MODEL_CLAUDE_3_SONNET`、`MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
 		Model: anthropic.MODEL_CLAUDE_3_HAIKU
 		Messages: []anthropic.Message{{
 			Role: "user",
@@ -71,7 +71,7 @@ func main() {
 	// })
 
 	stream, _ := cli.CreateMessagesStream(anthropic.MessagesRequest{
-		// `MODEL_CLAUDE_3_SONNET`、`MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
+		// `MODEL_CLAUDE_35_SONNET`、`MODEL_CLAUDE_3_SONNET`、`MODEL_CLAUDE_3_OPUS`、`MODEL_CLAUDE_2_1`
 		Model: anthropic.MODEL_CLAUDE_3_HAIKU
 		Messages: []anthropic.Message{{
 			Role: "user",

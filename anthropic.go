@@ -8,6 +8,8 @@ const (
 	MODEL_CLAUDE_3_SONNET = "claude-3-sonnet-20240229"
 	MODEL_CLAUDE_3_OPUS   = "claude-3-opus-20240229"
 	MODEL_CLAUDE_3_HAIKU  = "claude-3-haiku-20240307"
+
+	MODEL_CLAUDE_35_SONNET = "claude-3-5-sonnet-20240620"
 )
 
 // MessageContentText | MessageContentFile
